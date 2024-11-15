@@ -407,6 +407,10 @@ div.news h3 a:hover {
   }
 }
 
+#map {
+  text-align: center;
+}
+
 div.app.grid-container {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
