@@ -1,13 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="utf-8"/>
-    <title>My First Parcel App</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="app.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="rutas para el senderismo en Martorell y alrededores">
+    <link rel="icon" href="img/favicon.png" type="image/x-png">
+    <title>Senderismo en Martorell</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/script.js"></script>
   </head>
   <body>
-    <include src="src/header.html"></include>
-    <h1>Hello, World!</h1>
+  
+    <header class="container">
+      <include src="src/components/header.html"></include>  
+    </header>
+    <main id="main">
+      
+      <section class="container info">
+        <h2 class="text-center">Qué es Senderismo en Martorell?</h2>
+        <p>Senderismo en Martorell es un lugar donde descubrir y compartir las mejores rutas al aire libre para practicar senderismo, ciclismo y muchas otras actividades.</p>
+     </section>
+    <section class="container">
+        <h2 class="text-center">Noticías</h2>
+        <div class="news">
+            <div>
+                <img src="img/martorell.jpg" alt="" class="img-fluid" width="800" height="800">
+                <h3><a href="martorell.html"> Descubre Martorell</a></h3>
+                <p>Martorell es un municipio del Baix Llobregat, situado en la orilla derecha </time> .</p>
+                <a href="martorell.html" title="La ciudad de Martorell" class="more-info">Leer más</a>
+            </div>
+            <div>
+              <img src="img/rutas.jpg" alt="" class="img-fluid" width="800" height="800">
+              <h3><a href="rutas.html"> Descubre rutas</a></h3>
+              <p>Descubre las mejores rutas para hacer senderismo en Martorell y alreadedores</p>
+              <a href="rutas.html" title="La ciudad de Martorell" class="more-info">Leer más</a>
+          </div>
+           
+        </div>
+    </section>
+      
+    </main>
+
+   <footer class="footer">
+      <include src="src/components/footer.html"></include>              
+   </footer>   
   </body>
 </html>

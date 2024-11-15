@@ -1,0 +1,462 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  color: rgb(0, 0, 0);
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1em;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+a {
+  color: rgb(216, 159, 124);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+
+a.more-info {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: rgb(216, 159, 124);
+  font-weight: 700;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+a.more-info::before {
+  content: ">";
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+
+a.more-info:hover {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+}
+
+abbr {
+  text-decoration: none;
+}
+
+cite {
+  font-style: italic;
+  font-weight: 700;
+}
+
+q {
+  quotes: "«" "»";
+}
+
+iframe {
+  border: 0;
+}
+
+figcaption p {
+  font-size: 1rem;
+}
+
+/*Elementos multimedia */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.video-fluid {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.video-fluid-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-fluid::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+
+/*Classe per amagar un element que serà únicament visible als lectors de pantalla*/
+.sr {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*Estils per a textos i alineaments*/
+.text-center {
+  text-align: center;
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+/****************************
+Contenidores
+*****************************/
+section, article, aside, main {
+  margin: 3rem 0;
+}
+
+header {
+  padding: 2rem 0 0.75rem;
+}
+
+footer {
+  padding: 2.5rem;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+/****************************
+Contenido del header
+*****************************/
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: -0.5rem;
+}
+
+h1 span:first-of-type {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+h1 a {
+  color: inherit;
+}
+
+h1 a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  header {
+    text-align: left;
+  }
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+/****************************
+Menu de navegación 
+*****************************/
+nav {
+  position: sticky;
+  top: 0; /* que es matingui fixat en la part superior en desplaçar-se*/
+  z-index: 1; /* que quedi per sobre dels videos de youtube */
+  background: rgb(247, 247, 247);
+  padding: 1.4rem 0;
+  box-shadow: 0 4px 8px 0 rgba(13, 10, 44, 0.04);
+}
+
+nav ul {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  list-style-type: none;
+}
+
+nav li {
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+nav li a {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+nav li a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  nav ul {
+    font-size: 1.2rem;
+    display: flex;
+  }
+  nav ul li {
+    text-align: left;
+    margin-right: 30px;
+  }
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+}
+.nav-item.active {
+  background-color: rgb(216, 159, 124);
+}
+
+/****************************
+Contenido del footer
+*****************************/
+.footer {
+  background-color: rgb(0, 0, 0);
+  color: rgb(247, 247, 247);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.footer a {
+  color: rgb(247, 247, 247);
+}
+
+.footer a:hover {
+  color: rgb(216, 159, 124);
+  text-decoration: none;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.footer ul.social li {
+  display: inline-block;
+}
+
+.footer ul.social li img:hover {
+  opacity: 0.7;
+}
+
+.footer ul.legals {
+  padding-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 0.5rem;
+}
+
+.footer .credits p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    text-align: left;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer ul.legals li {
+    display: inline-block;
+  }
+  .footer ul.legals li::after {
+    content: " · ";
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  .footer ul.legals li:last-child::after {
+    content: "";
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/********************************
+Portada
+*********************************/
+section.info p {
+  font-size: 1.1rem;
+}
+
+div.news > div {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+div.news time {
+  display: block;
+  padding: 1rem 0;
+}
+
+div.news h3 a {
+  color: rgb(216, 159, 124);
+}
+
+div.news h3 a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  section.info p {
+    font-size: 1.4rem;
+  }
+  div.news {
+    display: flex;
+    justify-content: space-between;
+  }
+  div.news > div {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  section.info p {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/************************************************************
+Martorell
+*************************************************************/
+/************************************************************
+Rutas
+*************************************************************/
+div.app.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+div.app.grid-container > div {
+  background-color: rgb(244, 246, 247);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.app.grid-container > div > div:first-child {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+div.app.grid-container p {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 992px) {
+  div.app.grid-container {
+    gap: 5rem;
+  }
+  div.app.grid-container > div > div:first-child {
+    font-size: 2.3rem;
+  }
+  div.app.grid-container p {
+    font-size: 1.3rem;
+  }
+}
+/************************************************************
+Una ruta
+*************************************************************/
+#summary-list li {
+  list-style-type: none;
+  text-align: center;
+}
+
+/************************************************************
+Biografia
+*************************************************************/
+
+/*# sourceMappingURL=styles.css.map */
