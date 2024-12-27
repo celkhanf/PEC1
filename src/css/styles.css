@@ -387,6 +387,16 @@ div.news h3 a:hover {
   text-decoration: none;
 }
 
+.news img {
+  max-width: 100%;
+  clip-path: circle(39%);
+  transition: clip-path 1s;
+}
+
+.news img:hover {
+  clip-path: circle(100%);
+}
+
 @media (min-width: 768px) {
   section.info p {
     font-size: 1.4rem;
@@ -409,10 +419,21 @@ div.news h3 a:hover {
 /************************************************************
 Martorell
 *************************************************************/
-#map {
-  text-align: center;
+.animationP {
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 /************************************************************
 Rutas
 *************************************************************/
@@ -457,6 +478,13 @@ Una ruta
 #summary-list li {
   list-style-type: none;
   text-align: center;
+}
+
+.example1 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 /************************************************************
