@@ -15,7 +15,7 @@ body {
   color: $uoc-corporate;
 }
 
-.uoc-container {
+.cards__card {
   max-width: 800px;
   margin: auto;
   padding: 2rem;
@@ -26,7 +26,7 @@ body {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.uoc-logo {
+.card__img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -39,7 +39,7 @@ body {
   }
 }
 
-.uoc-title {
+.cards__title {
   font-family: $font-family-serif;
   font-size: 24px;
   font-weight: 700;
@@ -52,8 +52,28 @@ body {
   
 }
 
+
+
 .uoc-footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
 }
+
+@media (min-width: 200px) {
+  .card__img {
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .card__img {
+    width: 800px;
+    height: 800px;
+  }
+}
+
+
+
